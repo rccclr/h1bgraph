@@ -1,7 +1,12 @@
+
 import React, { Component } from 'react';
 import d3 from 'd3';
 
+import { Title, Description } from './Meta';
 import Histogram from '../Histogram';
+import Mean from './Mean';
+import Controls from './Controls';
+
 
 require('./style.less');
 
@@ -48,7 +53,6 @@ class H1BGraph extends Component {
     }
 
     loadRawData() {
-        let hola = "hola";
         let dateFormat = d3.time.format("%m/%d/%Y");
 
         d3.csv(this.props.url)
@@ -104,13 +108,23 @@ class H1BGraph extends Component {
         },
             fullWidth = 700;
 
+        let onlyGoodVisas = this.state
+                                .rawData
+                                .filter((d) => d.case_status == "certified"),
+            filteredData = onlyGoodVisas.filter(this.state.dataFilter);
+
         return (
             <div>
+                <Title data={filteredData} />
+                <Description data={filteredData} allData={onlyGoodVisas} />
                 <svg width={fullWidth} height={params.height}>
-                    <Histogram {...params} data={this.state.rawData} />
+                    <Histogram {...params} data={filteredData} />
+                    <Mean {...params} data={filteredData} width={fullWidth} />
                 </svg>
-            </div>    
+                <Controls data={onlyGoodVisas} updateDataFilter={::this.updateDataFilter} />
+            </div>
         );
     }
 }
+
 export default H1BGraph;
