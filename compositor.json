@@ -1,0 +1,90 @@
+{
+  "name": "rccclr/h1bgraph",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Material",
+    "componentSet": {
+      "nav": "nav/DarkAbsoluteNav",
+      "header": "header/GradientHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Roboto, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "letterSpacing": "-0.01em"
+    },
+    "colors": {
+      "text": "#212121",
+      "background": "#fff",
+      "primary": "#2196f3",
+      "secondary": "#1565c0",
+      "highlight": "#ff4081",
+      "border": "#e0e0e0",
+      "muted": "#f5f5f5"
+    },
+    "layout": {
+      "centered": true,
+      "bannerHeight": "80vh",
+      "maxWidth": 896
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/rccclr/h1bgraph",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/react-d3-example",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "h1bgraph",
+      "subhead": "An example project to show off React and d3 working together.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "h1bgraph: An example project to show off React and d3 working together.",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "rccclr",
+          "repo": "h1bgraph"
+        }
+      ],
+      "text": "v0.1.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<blockquote>\n<h2>This Project Is Deprecated</h2>\n<p>React Hot Loader 3 is <a href=\"https://github.com/gaearon/react-hot-loader/pull/240\">on the horizon</a>, and you can try it today (<a href=\"https://github.com/gaearon/react-hot-boilerplate/pull/61\">boilerplate branch</a>, <a href=\"https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915\">upgrade example</a>). It fixes some <a href=\"https://twitter.com/dan_abramov/status/722040946075045888\">long-standing issues</a> with both React Hot Loader and React Transform, and is intended as a replacement for both. The docs are not there yet, but they will be added before the final release. For now, <a href=\"https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915\">this commit</a> is a good reference.</p>\n</blockquote>\n<h1>React Transform Boilerplate</h1>\n<p><a href=\"http://www.reactiflux.com\"><img src=\"https://img.shields.io/badge/discord-react--transform%40reactiflux-61DAFB.svg?style=flat-square\"></a></p>\n<h2>&#x1F6A7;&#x1F6A7;&#x1F6A7;&#x1F6A7;&#x1F6A7;</h2>\n<h3>Highly Experimental</h3>\n<p>This is <strong>highly experimental tech</strong>. If you&#x2019;re enthusiastic about hot reloading, by all means, give it a try, but don&#x2019;t bet your project on it. Either of the technologies it relies upon may change drastically or get deprecated any day. You&#x2019;ve been warned &#x1F609; .</p>\n<h3>Not a Boilerplate</h3>\n<p>While this is a boilerplate project, it is not the kind that you can copy, paste, and forget. It does not help you pick the right structure for your app, and it does not show how to handle problems like images, static assets, CSS, server rendering, etc.</p>\n<p><strong>It exists to prototype next-generation React developer experience</strong> with hot reloading that preserves component state and DOM, and error handling both for syntax and runtime errors in <code>render()</code>. You can learn techniques from this boilerplate and use them in your project but please don&#x2019;t copy it blindly if you don&#x2019;t know the underlying technologies well. Otherwise you are likely to get disillusioned with JavaScript tooling.</p>\n<p><strong>No effort went into making this user-friendly yet. The goal is to eventually kill this technology</strong> in favor of less hacky technologies baked into React. These projects are not long term.</p>\n<h3>You May Not Need It</h3>\n<p>Even if you like hot reloading, you still may not need React Transform. <strong>If you use something like <a href=\"https://github.com/reactjs/redux\">Redux</a> for managing your state, we suggest that you just <a href=\"https://github.com/reactjs/redux/pull/1455\">use Webpack HMR API directly instead of all the hacky proxies, Babel plugins, and all that jazz</a>.</strong> Seriously, check it out, it&#x2019;s a much cleaner solution that may work great for you.</p>\n<h2>About</h2>\n<p>This project is a reference implementation of <strong><a href=\"https://github.com/gaearon/babel-plugin-react-transform\">babel-plugin-react-transform</a></strong>. It can be used as a boilerplate demonstrating a few useful transforms:</p>\n<ul>\n<li><a href=\"https://github.com/gaearon/react-transform-hmr\"><strong>react-transform-hmr</strong></a> - enables hot reloading react components</li>\n<li><a href=\"https://github.com/gaearon/react-transform-catch-errors\"><strong>react-transform-catch-errors</strong></a> - catches errors inside <code>render()</code></li>\n</ul>\n<p>For convenience, they are packed in a single preset called <a href=\"https://github.com/danmartinez101/babel-preset-react-hmre\"><strong>react-transform-hmre</strong></a> but you can make your own.</p>\n<p>Syntax errors are displayed in an overlay using <strong><a href=\"https://github.com/glenjamin\">@glenjamin</a></strong>&#x2019;s <strong><a href=\"https://github.com/glenjamin/webpack-hot-middleware\">webpack-hot-middleware</a></strong>, which replaces Webpack Dev Server. This project <strong><a href=\"https://medium.com/@dan_abramov/the-death-of-react-hot-loader-765fa791d7c4\">does not</a></strong> use React Hot Loader.</p>\n<h2>Demo</h2>\n<p><img src=\"https://cloud.githubusercontent.com/assets/1539088/11611771/ae1a6bd8-9bac-11e5-9206-42447e0fe064.gif\"></p>\n<h2>Installation</h2>\n<pre>git <span class=\"hljs-built_in\">clone</span> https://github.com/gaearon/react-transform-boilerplate.git\n<span class=\"hljs-built_in\">cd</span> react-transform-boilerplate\nnpm install\nnpm start\nopen http://localhost:3000</pre><p>Transforms are enabled for files inside <code>src</code> (except <code>index.js</code>).</p>\n<h2>FAQ</h2>\n<h4>Do I need to use it in my React project?</h4>\n<p>No! This is experimental stuff. It&#x2019;s not polished, it doesn&#x2019;t work in all browsers, the docs are poor, and it presumes you understand how Babel, Webpack, React, and other tools can work together. If you&#x2019;re a beginner, we suggest you to work with more simple and stable boilerplates, and come back when you&#x2019;re comfortable with them and want to experiment with your own tooling.</p>\n<h4>Should I run this on the server / in tests / in production?</h4>\n<p>No! This is only meant for client development environment. Make sure your <code>NODE_ENV</code> is neither <code>development</code> nor empty in these environments. Alternatively you can put the Babel configuration under a different <code>env</code> key and use your custom <code>NODE_ENV</code> or <code>BABEL_ENV</code> to turn these transforms on. Or you can <a href=\"https://github.com/babel/babel-loader#options\">embed Babel configuration inside the Webpack config </a>. No matter how you do it, <strong>make sure you&#x2019;re <em>only</em> running this transform in client-side development mode, and it is disabled on the server, in tests, and in production.</strong></p>\n<h4>I can&#x2019;t serve images, use different HTML, add CSS, etc.</h4>\n<p>This project is a reference implementation of <strong><a href=\"https://github.com/gaearon/babel-plugin-react-transform\">babel-plugin-react-transform</a></strong>&#x2014;it is just a Webpack bundle served by an Express server. It&#x2019;s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application. For example, <a href=\"https://github.com/gaearon/react-transform-boilerplate/pull/52\">you can use <code>express.static()</code> to serve static assets</a>.</p>\n<h4>I get &#x201C;full reload needed&#x201D; when I edit some files</h4>\n<p>Webpack hot module updates follow the import chain. As long as a module &#x201C;ends up&#x201D; being imported from components only, hot updates should work. If a specific module import chain ends in something like <code>index.js</code> which is not a component, hot updates will fail because <code>react-transform-hmr</code> has no idea how to handle updates to something other than components.</p>\n<p>Note that by &#x201C;components&#x201D; we currently mean components created either by inheriting from <code>React.Component</code> or created with <code>React.createClass()</code>. We don&#x2019;t currently support functional components although <a href=\"https://github.com/gaearon/babel-plugin-react-transform/issues/57\">this might be implemented for the future</a>. If you use something like Redux, note that you can get support for functional components for free without React Transform&#x2014;maybe <a href=\"https://github.com/reactjs/redux/pull/1455\">this is exactly what you want?</a></p>\n<p>That said you can write manual code to handle hot updates of modules that don&#x2019;t end up consumed by components. For example, this is how <a href=\"https://github.com/reactjs/redux/blob/952b45d6d74f1789ddc4ed05043a2c6e1a5ea808/examples/async/store/configureStore.js#L13-L19\">we hot replace reducers in Redux</a>.</p>\n<h4>What errors does it catch?</h4>\n<p><code>react-transform-catch-errors</code> catches <strong>runtime errors inside <code>render()</code> method</strong> of React components it detects.\nWebpack Hot Middleware catches <strong>syntax errors anywhere in the module</strong>.</p>\n<p>These are two different tools and you need to be aware of that.</p>\n<h4>Can I use WebpackDevServer with this?</h4>\n<p>Absolutely! We only show Express server with <code>webpack-dev-middleware</code> and <code>webpack-hot-middleware</code> because people often have a Node server anyway, and it can be tricky to configure WebpackDevServer to work with existing server. Additionally, <code>webpack-hot-middleware</code> displays syntax errors in an overlay, which WebpackDevServer doesn&#x2019;t do.</p>\n<p>However, you can use WebpackDevServer instead of the custom server just fine.</p>\n<h4>I don&#x2019;t see the syntax error overlay</h4>\n<p>Make sure your react-app is not attached to <code>document.body</code>. The client overlay provided by <a href=\"https://github.com/glenjamin/webpack-hot-middleware\">webpack-hot-middleware</a> will render into <code>document.body</code>. </p>\n<p>Attaching the React root node to <code>document.body</code> requires extra caution, as many third-party packages will append their markup to the body as well. React will replace the entire contents in the body on every re-render. Thus, you will not see the additional markup.</p>\n<p>It&#x2019;s always better to render your React app in a <code>#root</code> DOM element.</p>\n<pre><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>\n<span class=\"hljs-keyword\">import</span> { render } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react-dom&apos;</span>\n<span class=\"hljs-keyword\">import</span> { App } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;app&apos;</span>\n\nrender(<span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">App</span> /&gt;</span>, document.getElementById(&apos;root&apos;))</span></pre><h4>How can I have multiple entry points?</h4>\n<p>Your config could look like this:</p>\n<pre><span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-attr\">entry</span>: {\n    <span class=\"hljs-attr\">A</span>: [<span class=\"hljs-string\">&apos;webpack-hot-middleware/client&apos;</span>, <span class=\"hljs-string\">&apos;./src/a.js&apos;</span>],\n    <span class=\"hljs-attr\">B</span>: [<span class=\"hljs-string\">&apos;webpack-hot-middleware/client&apos;</span>, <span class=\"hljs-string\">&apos;./src/b.js&apos;</span>]\n  },\n  <span class=\"hljs-comment\">// ...</span>\n}</pre><p>Note that the order of files inside the entry point is important. And don&#x2019;t forget to exclude the hot middleware client from the production builds!</p>\n<h2>Discussion</h2>\n<p>You can discuss React Transform and related projects in <strong>#react-transform</strong> channel on <a href=\"http://reactiflux.com\">Reactiflux Discord</a>.</p>\n<h2>Thanks</h2>\n<ul>\n<li><a href=\"https://github.com/justingreenberg\">@justingreenberg</a> and <a href=\"https://github.com/thejameskyle\">@thejameskyle</a> for Babel 6 support.</li>\n</ul>\n<h2>License</h2>\n<p>CC0 (public domain)</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/rccclr/h1bgraph",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/rccclr",
+          "text": "rccclr"
+        }
+      ]
+    }
+  ]
+}
